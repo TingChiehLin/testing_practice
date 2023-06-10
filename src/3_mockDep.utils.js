@@ -3,9 +3,9 @@
  * @param {String} password
  */
 export async function validatePasswordApi(password) {
-  return Promise.resolve(!!password);
+  return await Promise.resolve(!!password);
 }
-
+// what are the possible outcomes of generatePassword() ? Those are the things you need to test.
 /**
  * Return a random number between min and max
  * @param {Number} min

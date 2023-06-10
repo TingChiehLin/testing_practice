@@ -9,11 +9,11 @@ describe("1_Basics Testing Practice", () => {
   });
 
   describe("isSmallerThan10()", () => {
-    it("should be smaller than 10?", () => {
+    it("should be smaller than 10", () => {
       const result = isSmallerThan10(7);
       expect(result).toBe("yes dah!");
     });
-    it("should not be smaller than 10?", () => {
+    it("should be bigger than 10", () => {
       const result = isSmallerThan10(12);
       expect(result).toBe("not really...");
     });
