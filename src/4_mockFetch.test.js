@@ -3,7 +3,7 @@ import { fetchJoke } from "./4_mockFetch";
 describe("4_mockFetch_test", () => {
   global.fetch = jest.fn(() => {
     Promise.resolve({
-      json: (r) => r,
+      json: () => Promise.resolve(),
     });
   });
 
