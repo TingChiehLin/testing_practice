@@ -9,6 +9,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "jest-fetch-mock": "^3.0.3",
     "parcel-bundler": "^1.6.1"
   },
   "devDependencies": {

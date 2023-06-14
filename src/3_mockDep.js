@@ -1,14 +1,14 @@
-import { validatePasswordApi, randomizer } from './3_mockDep.utils';
+import { validatePasswordApi, randomizer } from "./3_mockDep.utils";
 
-const abc = 'abcdefghijklmnopqrstuvwyxz';
+const abc = "abcdefghijklmnopqrstuvwyxz";
 
-export async function generatePassword(size = 0, specialChar = '') {
+export async function generatePassword(size = 0, specialChar = "") {
   // If the size is not provided, an error is thrown
   if (size === 0) {
-    throw new Error('Invalid parameters');
+    throw new Error("Invalid parameters");
   }
 
-  let password = '';
+  let password = "";
 
   // Randomly get a letter to append to our password string
   for (let i = 0; i < size; i++) {
