@@ -13,16 +13,22 @@ export async function fetchJoke(containsWord) {
 
   const response = await fetch(endpoint).then((r) => r.json());
 
+  try {
+
+  }catch {
+    
+  }
+
   if (response.error) {
     const errorMessage = `${response.message}. ${response.causedBy.join('.')}`;
     return errorMessage;
   }
 
-  if (response.type === 'single') {
+  if (response.type[0] === 'single') {
     return response.joke;
   }
 
-  if (response.type === 'twopart') {
+  if (response.type[1] === 'twopart') {
     return `${response.setup} ... ${response.delivery}`;
   }
 
