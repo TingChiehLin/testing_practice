@@ -16,7 +16,7 @@ export async function fetchJoke(containsWord) {
   try {
 
   }catch {
-    
+
   }
 
   if (response.error) {
@@ -24,11 +24,11 @@ export async function fetchJoke(containsWord) {
     return errorMessage;
   }
 
-  if (response.type[0] === 'single') {
+  if (response.type === 'single') {
     return response.joke;
   }
 
-  if (response.type[1] === 'twopart') {
+  if (response.type === 'twopart') {
     return `${response.setup} ... ${response.delivery}`;
   }
 
