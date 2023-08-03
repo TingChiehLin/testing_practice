@@ -8,7 +8,7 @@ describe("4_mockFetch_test", () => {
 
   it("should pass an argument into fetchJoke", async () => {
     global.fetch = jest.fn(() => {
-      Promise.resolve({
+      return Promise.resolve({
         json: () =>
           Promise.resolve({
             type: "single",
